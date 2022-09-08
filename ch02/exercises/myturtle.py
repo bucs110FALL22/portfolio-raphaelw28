@@ -1,23 +1,26 @@
 import turtle
 
-myturtle = turtle.Screen()
-turtle.Screen() = window
-window.exitonlick()
+window = turtle.Screen()
 
-my_turtle.shape("turtle")
-my_turtle.color("purple")
+myturtle = turtle.Turtle()
 
-square_length = 50
-square_sides = 4
-angle = 90 / side_squares
-for i in [angle]*square_sides
-  my_turtle.forward(length)
-  my_turtle.left(i)
+myturtle.shape("turtle")
+myturtle.color("purple")
 
-my_turtle.color("red")
-turtle.penup()
-my_turtle.forward(100)
-turtle.pendown()
-for i in [angle]*square_sides
-  my_turtle.forward(length)
-  my_turtle.left(i)
+length = 50
+sides = 4
+angle = 90 
+for i in [angle]*(sides):
+    myturtle.forward(length)
+    myturtle.left(i)
+
+myturtle.color("red")
+myturtle.penup()
+myturtle.forward(100)
+myturtle.pendown()
+
+for i in [angle]*(sides):
+    myturtle.forward(length)
+    myturtle.left(i)
+
+window.exitonclick()
