@@ -2,18 +2,17 @@ import random
 
 result = range(1,11)
 
-result = random.choice(result)
-result = int(result)
+result = int(random.choice(result))
 print(result)
 
 for i in [result]*3:
   guess = input("Your guess?")
   guess = int(guess)
-  if guess < result:
+  if guess < i:
       print("Too low")
-  if guess > result: 
+  if guess > i: 
       print("Too high")
-  if guess == result: 
+  if guess == i: 
       print("Correct!")
       break
 
