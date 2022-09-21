@@ -15,7 +15,7 @@ for i in [result]*3:
   if guess == i: 
       print("Correct!")
       break
-
+s
   #for i in [guess]:
     #if guess < result:
      # print("Too low")
