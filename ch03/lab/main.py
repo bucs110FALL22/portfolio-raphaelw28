@@ -1,5 +1,7 @@
 import turtle #1. import modules
 import random
+import pygame
+import math
 
 #Part A
 window = turtle.Screen() # 2.  Create a screen
@@ -19,8 +21,76 @@ leonardo.goto(-100,-20)
 
 ## 5. Your PART A code goes here
 
+x = random.randrange(1,101)
+michelangelo.forward(x)
+leonardo.forward(x)
+
+michelangelo.up()
+leonardo.up()
+michelangelo.goto(-100,20)
+leonardo.goto(-100,-20)
+
+x = random.randrange(1,11)
+
+for i in [x]*10:
+  michelangelo.forward(x)
+  leonardo.forward(x)
+
+michelangelo.up()
+leonardo.up()
+michelangelo.goto(-100,20)
+leonardo.goto(-100,-20)
 
 # PART B - complete part B here
+pygame.init()
+window = pygame.display.set_mode((800,800))
+pygame.Color((255,255,255))
+
+def points(num_sides):
+  coords = []
+  num_sides = num_sides
+  side_length = 50
+  offset = 100
+
+  for i in range(num_sides):
+    theta = (2.0 * math.pi * (i)) / num_sides
+    x = side_length * math.cos(theta) + offset
+    y = side_length * math.sin(theta) + offset
+    coords.append([x,y])
+  return coords
 
 
-window.exitonclick()
+point = 3, 4, 6, 9, 360
+for i in (point):
+  pygame.draw.polygon(window, "white", points(i))
+  pygame.display.flip()
+  pygame.time.delay(5000)
+  window.fill("black")
+
+
+#pygame.draw.polygon(window, "red", points(3))
+#pygame.display.flip()
+#pygame.time.delay(1000)
+#window.fill("red")
+
+#pygame.draw.polygon(window, "orange", points(4))
+#pygame.display.flip()
+#pygame.time.delay(1000)
+#window.fill("orange")
+
+#pygame.draw.polygon(window, "yellow", points(6))
+#pygame.display.flip()
+#pygame.time.delay(1000)
+#window.fill("yellow")
+
+#pygame.draw.polygon(window, "green", points(9))
+#pygame.display.flip()
+#pygame.time.delay(1000)
+#window.fill("green")
+
+#pygame.draw.polygon(window, "blue", points(360))
+#pygame.display.flip()
+#pygame.time.delay(1000)
+#window.fill("blue")
+
+
