@@ -1,6 +1,7 @@
 # CS110 Portfolio
-Preferred Name: <<Raphael Wong>>
 
-Discord username: <<Raph#1008>>
+Preferred Name: Raphael Wong
 
-REPL url: <<https://replit.com/join/rrrarxxuzq-raphaelwong5>>
+Discord username: Raph#1008
+
+REPL url: https://replit.com/join/rrrarxxuzq-raphaelwong5
