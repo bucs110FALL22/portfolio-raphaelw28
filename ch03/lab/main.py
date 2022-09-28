@@ -68,29 +68,29 @@ for i in (point):
   window.fill("black")
 
 
-#pygame.draw.polygon(window, "red", points(3))
+#pygame.draw.polygon(window, "white", points(3))
 #pygame.display.flip()
 #pygame.time.delay(1000)
-#window.fill("red")
+#window.fill("black")
 
-#pygame.draw.polygon(window, "orange", points(4))
+#pygame.draw.polygon(window, "white", points(4))
 #pygame.display.flip()
 #pygame.time.delay(1000)
-#window.fill("orange")
+#window.fill("black")
 
-#pygame.draw.polygon(window, "yellow", points(6))
+#pygame.draw.polygon(window, "white", points(6))
 #pygame.display.flip()
 #pygame.time.delay(1000)
-#window.fill("yellow")
+#window.fill("black")
 
-#pygame.draw.polygon(window, "green", points(9))
+#pygame.draw.polygon(window, "white", points(9))
 #pygame.display.flip()
 #pygame.time.delay(1000)
-#window.fill("green")
+#window.fill("black")
 
-#pygame.draw.polygon(window, "blue", points(360))
+#pygame.draw.polygon(window, "white", points(360))
 #pygame.display.flip()
 #pygame.time.delay(1000)
-#window.fill("blue")
+#window.fill("black")
 
 
