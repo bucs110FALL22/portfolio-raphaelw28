@@ -7,11 +7,14 @@ window.screensize(800,800)
 myturtle = turtle.Turtle()
 myturtle.shape("turtle")
 myturtle.color("green")
+myturtle.speed(0)
 
 x = turtle.xcor()
 y = turtle.ycor()
 coords = ([x,y])
 i = ([500,500])
+
+coords <= i == True
 while coords <= i:
       coords = list(myturtle.pos()) #myturtle.pos() returns a tuple. list(myturtle.pos()) puts that tuple into a list. this is necessary since i is a list containing a single tuple, and the comparison on line 25 would throw an error, otherwise.
       print(coords) #prints coords to the console.
@@ -22,8 +25,11 @@ while coords <= i:
       if coinflip == 2:
         myturtle.right(90)
       myturtle.forward(50)
-      if coords >= i: #be careful of using comparison operators on lists/tuples
+if coords >= i: #be careful of using comparison operators on lists/tuples
         #turtle.bye()
-        pass #pass does nothing
+        coords <= i == False
+        while coords <= i == False:
+          window.screen.color("blue")
+          pass #pass does nothin
 
 window.exitonclick() 
