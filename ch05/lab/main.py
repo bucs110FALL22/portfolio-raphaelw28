@@ -35,9 +35,11 @@ for i in range(start, upper_limit):
     pygame.time.wait(2000)
 print(iters)
 
-while True:
+running = True
+while running:
   for event in pygame.event.get():
     if event.type == pygame.QUIT:
       pygame.quit()
+      running = False
   
   
