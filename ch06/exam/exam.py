@@ -46,21 +46,20 @@ def feathers(r = 200, angle=90, n=7):
         myturtle.end_fill()
       myturtle.left(15)
     return  
-
+def circle(x = "color", y = 0):
+  fill_in(x)
+  myturtle.circle(y)
+  myturtle.end_fill()
+  
 move_turtle((0,-200))
 feathers()
 myturtle.right(105)
 
 #head and body
 move_turtle((0,0))
-fill_in("beige")
-myturtle.circle(50)
-myturtle.end_fill()
-myturtle.fillcolor("orange")
-myturtle.begin_fill()
-myturtle.circle(-100)
-myturtle.end_fill()
-
+circle("beige",50)
+circle("orange",-100)
+  
 #eyes
 eye_coords = ((-25,50),(25,50))
 myturtle.fillcolor("brown")
@@ -99,6 +98,7 @@ for i in range(4):
   myturtle.left(90) 
 myturtle.end_fill()
 
+#legs
 leg_coords = ((10,-200),(-10,-200))
 for i in leg_coords:
   move_turtle(i)
@@ -106,9 +106,4 @@ for i in leg_coords:
   myturtle.circle(-10)
   myturtle.end_fill()
 
-running = True
-while running:
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      pygame.quit()
-      running = False
+screen.exitonclick()
