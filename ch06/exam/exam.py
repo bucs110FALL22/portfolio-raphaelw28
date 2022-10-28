@@ -29,24 +29,44 @@ myturtle.shape("turtle")
 myturtle.speed(0)
 
 def fill_in(x = "color"):
+  '''
+   makes turtle color
+   turtle object starts to draw
+   turtle fills in polygons
+   '''
   myturtle.fillcolor(x)
   myturtle.begin_fill()
 def move_turtle(x):
+  '''
+   moving the turtle without lines
+   turtle object is lifted up, moved, then put down
+   turtle moves from point a to point b without lines
+   '''
   myturtle.penup()
   myturtle.goto(x)
   myturtle.pendown()
   return
 def feathers(r = 200, angle=90, n=7):
-    for i in range(n):
-      for i in range(2):
-        myturtle.fillcolor("brown")
-        myturtle.begin_fill()
-        myturtle.circle(r,angle)
-        myturtle.left(180-angle)
-        myturtle.end_fill()
-      myturtle.left(15)
-    return  
+  '''
+   makes the feathers of the turkey
+   makes half a feather, then the other half, colors it brown
+   makes 7 feathers behind the turkey
+  '''
+  for i in range(n):
+    for i in range(2):
+      myturtle.fillcolor("brown")
+      myturtle.begin_fill()
+      myturtle.circle(r,angle)
+      myturtle.left(180-angle)
+      myturtle.end_fill()
+    myturtle.left(15)
+  return  
 def circle(x = "color", y = 0):
+  '''
+   make the turtle draw a circle
+   input the color and radius of a circle so turtle can draw one
+   filled in circle with color and radius of choice
+   '''
   fill_in(x)
   myturtle.circle(y)
   myturtle.end_fill()
