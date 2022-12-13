@@ -18,14 +18,14 @@ uv_index = uv.get_uv_index(lat, lon)
 temp_kelvin = weather["main"]["temp"]
 temp_celcius = temp_kelvin - 273.15
 
-#print temperature and weather
+#Print temperature and weather
 print(f'The current temperature is {temp_celcius} degrees Celcius.')
 print(f'The weather is currently: {weather["weather"][0]["description"]}')
 
 # Print the current UV index and a message about its potential dangers
 print(f'The current UV index is: {uv_index["result"]["uv"]}')
 
-if uv_index["result"]["uv"] >= 8:
+if uv_index["result"]["uv"] >= 6:
     print('Be sure to wear sunscreen and take other precautions to protect yourself from the sun.')
 else:
     print('No need to wear sunscreen, but still take precautions against overexposure from UV rays')
